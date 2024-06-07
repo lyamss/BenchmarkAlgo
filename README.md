@@ -19,3 +19,6 @@ cd ./bin/Debug/net8.0
 **Place the files folder in the download folder in order to use the files necessary for the algorithm**
 
 ![Alt Text](./download_files.png "Place the files folder in the download folder in order to use the files necessary for the algorithm")
+
+**Results exemple**
+![Alt Text](./image.png "Results exemple")
