@@ -28,21 +28,34 @@ namespace Benchmark.Services
             }
         }
 
-        private static int Partition(List<string> list, int low, int high)
-        {
-            string pivot = list[high];
-            int i = low - 1;
-            for (int j = low; j <= high; j++)
-            {
-                if (string.Compare(list[j], pivot) < 0)
-                {
-                    i++;
-                    Swap(list, i, j);
-                }
-            }
-            Swap(list, i + 1, high);
-            return i + 1;
-        }
+         private static int Partition(List<string> list, int low, int high)
+         {
+             int mid = (low + high) / 2;
+             if (string.Compare(list[mid], list[low]) < 0)
+             {
+                 Swap(list, mid, low);
+             }
+             if (string.Compare(list[high], list[low]) < 0)
+             {
+                 Swap(list, high, low);
+             }
+             if (string.Compare(list[mid], list[high]) < 0)
+             {
+                 Swap(list, mid, high);
+             }
+             string pivot = list[high];
+             int i = low - 1;
+             for (int j = low; j <= high; j++)
+             {
+                 if (string.Compare(list[j], pivot) < 0)
+                 {
+                     i++;
+                     Swap(list, i, j);
+                 }
+             }
+             Swap(list, i + 1, high);
+             return i + 1;
+         }
 
 
         public List<string> InsertionSort(List<string> list)

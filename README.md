@@ -4,6 +4,10 @@ The objective is to implement the different algorithms (selection sort, bubble s
 
 *Start projet*
 
+**Place the folder *files* in the download folder in order to use the files necessary for the algorithm (You can choose the text files you want to time. Do not put text files that are too large)**
+
+![Alt Text](./download_files.png "Place the files folder in the download folder in order to use the files necessary for the algorithm")
+
 ```
 dotnet build
 ```
@@ -16,9 +20,7 @@ cd ./bin/Debug/net8.0
 ./Benchmark.exe
 ```
 
-**Place the files folder in the download folder in order to use the files necessary for the algorithm**
-
-![Alt Text](./download_files.png "Place the files folder in the download folder in order to use the files necessary for the algorithm")
+*The results file CSV is in the \bin\Debug\net8.0*
 
 **Results exemple**
-![Alt Text](./image.png "Results exemple")
+![Alt Text](./results.png "Results exemple")

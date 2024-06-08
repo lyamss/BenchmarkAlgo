@@ -1,6 +1,4 @@
 ﻿using System.Diagnostics;
-using System.Security.Cryptography;
-using System.Text;
 using Benchmark.Services;
 
 namespace FileTriSortBenchmark
@@ -10,7 +8,7 @@ namespace FileTriSortBenchmark
         static void Main(string[] args)
         {
             string basePath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Downloads\files";
-            string csvFilePath = @"results.csv"; // the file is in the \bin\Debug\net8.0
+            string csvFilePath = @"results.csv"; // The results file CSV is in the \bin\Debug\net8.0
 
             List<string> filePaths = new List<string>();
 
@@ -39,25 +37,25 @@ namespace FileTriSortBenchmark
                 Stopwatch stopwatch = new Stopwatch();
 
                 
-                stopwatch.Start();
+                stopwatch.Restart();
                 sortedLines = sort.SelectionSort(lines);
                 stopwatch.Stop();
                 double SelectionSortWatch = stopwatch.Elapsed.TotalMilliseconds;
 
 
-                stopwatch.Start();
+                stopwatch.Restart();
                 sortedLines = sort.BubbleSort(lines);
                 stopwatch.Stop();
                 double BubbleSortWatch = stopwatch.Elapsed.TotalMilliseconds;
 
 
-                stopwatch.Start();
+                stopwatch.Restart();
                 sortedLines = sort.InsertionSort(lines);
                 stopwatch.Stop();
                 double InsertionSortWatch = stopwatch.Elapsed.TotalMilliseconds;
 
 
-                stopwatch.Start();
+                stopwatch.Restart();
                 sortedLines = sort.QuickSort(lines);
                 stopwatch.Stop();
                 double QuickSortWatch = stopwatch.Elapsed.TotalMilliseconds;
