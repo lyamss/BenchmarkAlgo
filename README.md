@@ -1,4 +1,4 @@
-# BenchmarkAlgo (School projet)
+# BenchmarkAlgo
 
 The objective is to implement the different algorithms (selection sort, bubble sort, insertion sort, Quicksort) then to have them tested by sorting the words in the files in lexicographic order. To validate that the sorting is correct, the file name is the hash (MD5) of the correctly sorted file.
 
